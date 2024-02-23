@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import type { AppProps } from "next/app";
 import { Public_Sans } from "next/font/google";
 import Link from "next/link";
+import { useEffect } from "react";
+import Head from "next/head";
 
 const public_sans = Public_Sans({ subsets: ["latin"] });
 
@@ -15,8 +17,17 @@ const tabs = [
 
 /**
  * @see https://buildui.com/recipes/animated-tabs
+ * @see https://stackoverflow.com/questions/64452685/how-to-convert-unicode-character-to-svg-and-then-a-favicon
  */
 export default function App({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    document.head.appendChild(
+      Object.assign(document.createElement("link"), {
+        rel: "icon",
+        href: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>",
+      }),
+    );
+  }, []);
   return (
     <>
       <style jsx global>{`
@@ -24,6 +35,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
           font-family: ${public_sans.style.fontFamily};
         }
       `}</style>
+      <Head>
+        <title>
+          Kenny Tran - {tabs.find((tab) => tab.href === router.route)?.name}
+        </title>
+      </Head>
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl gap-y-6 lg:mx-0">
