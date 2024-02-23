@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import type { AppProps } from "next/app";
 import { Public_Sans } from "next/font/google";
 import Link from "next/link";
-import { useEffect } from "react";
-import Head from "next/head";
+import { useEffect, useMemo } from "react";
 
 const public_sans = Public_Sans({ subsets: ["latin"] });
 
@@ -28,6 +27,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
       }),
     );
   }, []);
+  const tab = useMemo(() => {
+    return tabs.find((tab) => tab.href === router.route)?.name;
+  }, [router.route]);
   return (
     <>
       <style jsx global>{`
@@ -35,11 +37,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
           font-family: ${public_sans.style.fontFamily};
         }
       `}</style>
-      <Head>
-        <title>
-          Kenny Tran - {tabs.find((tab) => tab.href === router.route)?.name}
-        </title>
-      </Head>
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl gap-y-6 lg:mx-0">
@@ -53,9 +50,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
                   name="tabs"
                   className="block w-full rounded-md border-zinc-300 focus:border-zinc-500 focus:ring-zinc-500"
                   onChange={(e) => router.push(e.target.value)}
-                  defaultValue={
-                    tabs.find((tab) => tab.href === router.route)?.name
-                  }
+                  defaultValue={tab}
                 >
                   {tabs.map((tab) => (
                     <option key={tab.name} value={tab.href}>
