@@ -9,7 +9,10 @@ import { useRouter } from "next/router";
 import { useContext, useMemo } from "react";
 import { tabs } from "./data";
 
-export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = (props) => {
+export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  ...props
+}) => {
   const t = useTranslate();
   const { push, route, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
@@ -28,7 +31,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = (props) => {
   };
   return (
     <header
-      className={cn("flex items-center justify-between", props.className)}
+      className={cn("flex items-center justify-between", className)}
       {...props}
     >
       <div className="sm:hidden">
