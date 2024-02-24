@@ -153,25 +153,31 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             {children}
           </motion.div>
         </AnimatePresence>
-        <footer>
+        <footer className="grid gap-y-10">
           <nav className="-mb-6 columns-2" aria-label="Footer">
             {links.main.map((item) => (
-              <div key={item.name} className="pb-6">
+              <div key={item.name} className="group w-fit pb-6">
                 <Link href={item.href} className="text-sm leading-6">
                   {item.name}
                 </Link>
+                <hr className="w-0 transition-all duration-300 group-hover:w-full" />
               </div>
             ))}
           </nav>
-          <div className="mt-10 flex space-x-10">
+          <div className="flex gap-x-10">
             {links.social.map((item) => (
-              <Link key={item.name} href={item.href}>
+              <Link
+                key={item.name}
+                href={item.href}
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+              >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </Link>
             ))}
           </div>
-          <p className="mt-10 text-xs leading-5">
+          <p className="text-xs leading-5">
             &copy; {new Date().getFullYear()} nytrek.dev. All rights reserved.
           </p>
         </footer>
