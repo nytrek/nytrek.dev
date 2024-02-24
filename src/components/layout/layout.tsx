@@ -58,7 +58,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             </select>
           </div>
           <div className="hidden py-4 sm:block">
-            <nav className="flex space-x-4" aria-label="Tabs">
+            <nav className="flex gap-x-4" aria-label="Tabs">
               {tabs.map((tab) => (
                 <button
                   key={tab.name}
