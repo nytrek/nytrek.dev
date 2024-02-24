@@ -12,7 +12,7 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
   return (
     <ul className={cn("grid gap-6 sm:grid-cols-2", className)} {...props}>
       {projects.map((item) => (
-        <li>
+        <li key={item.name}>
           <Link
             className="flex items-center gap-x-3.5 rounded-md border border-zinc-900 px-3 py-2.5 dark:border-white"
             href={item.href}
