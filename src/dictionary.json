@@ -1,0 +1,14 @@
+{
+  "en-US": {
+    "home": "home",
+    "about me": "about me",
+    "blog": "blog",
+    "projects": "projects"
+  },
+  "sv-SE": {
+    "home" : "hem",
+    "about me": "om mig",
+    "blog": "blogg",
+    "projects": "projekt"
+  }
+}

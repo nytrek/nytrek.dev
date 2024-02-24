@@ -1,3 +1,4 @@
+import useTranslate from "@/hooks/useTranslate";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
@@ -12,6 +13,7 @@ import { tabs } from "./data";
  * @see https://github.com/pacocoursey/next-themes?tab=readme-ov-file#usetheme
  */
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
+  const t = useTranslate();
   const { push, route, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
   const tab = useMemo(() => {
@@ -34,7 +36,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             >
               {tabs.map((tab) => (
                 <option key={tab.name} value={tab.href}>
-                  {tab.name}
+                  {t(tab.name)[0].toUpperCase() + t(tab.name).slice(1)}
                 </option>
               ))}
             </select>
@@ -59,7 +61,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
                       }}
                     />
                   )}
-                  {tab.name}
+                  {t(tab.name)[0].toUpperCase() + t(tab.name).slice(1)}
                 </Link>
               ))}
             </nav>

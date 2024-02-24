@@ -20,9 +20,9 @@ export default function Page() {
           </Link>{" "}
           🌱
         </span>
-        <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           I&apos;m Kenny -
-        </h2>
+        </h1>
         <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-300">
           an experienced developer with a passion for creating scalable and
           maintainable solutions.
