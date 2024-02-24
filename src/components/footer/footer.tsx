@@ -8,7 +8,7 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
 }) => {
   return (
     <footer className={cn("grid gap-y-10", className)} {...props}>
-      <nav className="-mb-6 columns-2" aria-label="Footer">
+      <nav className="-mb-6 grid grid-cols-2" aria-label="Footer">
         {links.main.map((item) => (
           <div key={item.name} className="group w-fit pb-6">
             <Link href={item.href} className="text-sm leading-6">
