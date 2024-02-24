@@ -2,7 +2,10 @@ export const links = {
   main: [
     { name: "Resume", href: "/cv.pdf" },
     { name: "Workout", href: "#" },
-    { name: "UI components", href: "#" },
+    {
+      name: "UI components",
+      href: "https://storybook.nytrek.dev",
+    },
   ],
   social: [
     {

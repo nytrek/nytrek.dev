@@ -11,7 +11,12 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       <nav className="-mb-6 grid grid-cols-2" aria-label="Footer">
         {links.main.map((item) => (
           <div key={item.name} className="group w-fit pb-6">
-            <Link href={item.href} className="text-sm leading-6">
+            <Link
+              href={item.href}
+              className="text-sm leading-6"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
               {item.name}
             </Link>
             <hr className="w-0 border-zinc-900 transition-all duration-300 group-hover:w-full dark:border-white" />
