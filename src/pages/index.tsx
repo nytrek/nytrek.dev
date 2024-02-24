@@ -1,7 +1,9 @@
+import useTranslate from "@/hooks/useTranslate";
 import Head from "next/head";
 import Link from "next/link";
 
 export default function Page() {
+  const t = useTranslate();
   return (
     <>
       <Head>
@@ -9,7 +11,8 @@ export default function Page() {
       </Head>
       <main className="grid gap-y-4">
         <span>
-          Welcome to my{" "}
+          {t("welcome to my").charAt(0).toUpperCase() +
+            t("welcome to my").slice(1)}{" "}
           <Link
             className="underline hover:no-underline"
             href="https://maggieappleton.com/garden-history"
@@ -21,11 +24,12 @@ export default function Page() {
           🌱
         </span>
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          I&apos;m Kenny -
+          {t("i'm").charAt(0).toUpperCase() + t("i'm").slice(1)} Kenny -
         </h1>
         <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-300">
-          an experienced developer with a passion for creating scalable and
-          maintainable solutions.
+          {t(
+            "an experienced developer with a passion for creating scalable and maintainable solutions.",
+          )}
         </p>
       </main>
     </>

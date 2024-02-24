@@ -3,12 +3,18 @@
     "home": "home",
     "about me": "about me",
     "blog": "blog",
-    "projects": "projects"
+    "projects": "projects",
+    "welcome to my": "velcome to my",
+    "i'm": "i'm",
+    "an experienced developer with a passion for creating scalable and maintainable solutions.": "an experienced developer with a passion for creating scalable and maintainable solutions."
   },
   "sv-SE": {
     "home" : "hem",
     "about me": "om mig",
     "blog": "blogg",
-    "projects": "projekt"
+    "projects": "projekt",
+    "welcome to my": "välkommen till min",
+    "i'm": "Jag är",
+    "an experienced developer with a passion for creating scalable and maintainable solutions.": "en erfaren utvecklare med en passion för att skapa skalbara och underhållbara lösningar."
   }
 }
