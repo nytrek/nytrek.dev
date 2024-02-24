@@ -13,7 +13,7 @@ export const links = {
   social: [
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/nytrek",
       icon: (props: React.HTMLAttributes<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
