@@ -4,7 +4,7 @@ export const links = {
     { name: "workout", href: "#" },
     {
       name: "components",
-      href: "https://storybook.nytrek.dev",
+      href: "https://storybook.nytrek.dev/",
     },
   ],
   social: [

@@ -36,7 +36,7 @@ export default function Page() {
             >
               Bostadsval
             </Link>{" "}
-            for real estate advertisements, I&apos;ve consistently strived for
+            for real estate listings, I&apos;ve consistently strived for
             excellence in every project I undertake.
           </p>
           <p>
