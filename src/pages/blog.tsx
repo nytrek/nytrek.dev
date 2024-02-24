@@ -1,13 +1,19 @@
 import Head from "next/head";
+import useTranslate from "@/hooks/useTranslate";
 
 export default function Page() {
+  const t = useTranslate();
   return (
     <>
       <Head>
-        <title>Kenny Tran - Blog</title>
+        <title>
+          Kenny Tran - {t("blog").charAt(0).toUpperCase() + t("blog").slice(1)}
+        </title>
       </Head>
       <main className="grid gap-y-4">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Blog</h1>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          {t("blog").charAt(0).toUpperCase() + t("blog").slice(1)}
+        </h1>
       </main>
     </>
   );

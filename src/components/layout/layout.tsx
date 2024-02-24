@@ -36,7 +36,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             >
               {tabs.map((tab) => (
                 <option key={tab.name} value={tab.href}>
-                  {t(tab.name)[0].toUpperCase() + t(tab.name).slice(1)}
+                  {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
                 </option>
               ))}
             </select>
@@ -61,7 +61,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
                       }}
                     />
                   )}
-                  {t(tab.name)[0].toUpperCase() + t(tab.name).slice(1)}
+                  {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
                 </Link>
               ))}
             </nav>
