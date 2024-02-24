@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useMemo } from "react";
-import { tabs } from "./data";
+import { links, tabs } from "./data";
 import { variants } from "./variants";
 
 /**
@@ -153,6 +153,28 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             {children}
           </motion.div>
         </AnimatePresence>
+        <footer>
+          <nav className="-mb-6 columns-2" aria-label="Footer">
+            {links.main.map((item) => (
+              <div key={item.name} className="pb-6">
+                <Link href={item.href} className="text-sm leading-6">
+                  {item.name}
+                </Link>
+              </div>
+            ))}
+          </nav>
+          <div className="mt-10 flex space-x-10">
+            {links.social.map((item) => (
+              <Link key={item.name} href={item.href}>
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+          <p className="mt-10 text-xs leading-5">
+            &copy; {new Date().getFullYear()} nytrek.dev. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );
