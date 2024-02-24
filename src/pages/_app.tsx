@@ -38,57 +38,61 @@ export default function App({ Component, pageProps, router }: AppProps) {
         }
       `}</style>
       <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto grid max-w-2xl gap-y-6 lg:mx-0">
-            <header>
-              <div className="sm:hidden">
-                <label htmlFor="tabs" className="sr-only">
-                  Select a tab
-                </label>
-                <select
-                  id="tabs"
-                  name="tabs"
-                  className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
-                  onChange={(e) => router.push(e.target.value)}
-                  defaultValue={tab}
-                >
-                  {tabs.map((tab) => (
-                    <option key={tab.name} value={tab.href}>
-                      {tab.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="hidden py-4 sm:block">
-                <nav className="flex space-x-4" aria-label="Tabs">
-                  {tabs.map((tab) => (
-                    <Link
-                      key={tab.name}
-                      className="relative rounded-md border border-white px-3 py-2 text-sm font-medium"
-                      href={tab.href}
-                      aria-current={
-                        tab.href === router.route ? "page" : undefined
-                      }
-                    >
-                      {tab.href === router.route && (
-                        <motion.span
-                          layoutId="tab"
-                          className="absolute inset-0 z-10 rounded-md bg-white mix-blend-difference"
-                          transition={{
-                            type: "spring",
-                            bounce: 0.2,
-                            duration: 0.6,
-                          }}
-                        />
-                      )}
-                      {tab.name}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </header>
-            <Component {...pageProps} />
-          </div>
+        <div className="mx-auto grid max-w-7xl gap-y-6 px-6 lg:px-8">
+          <header className="flex items-center justify-between">
+            <div className="sm:hidden">
+              <label htmlFor="tabs" className="sr-only">
+                Select a tab
+              </label>
+              <select
+                id="tabs"
+                name="tabs"
+                className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
+                onChange={(e) => router.push(e.target.value)}
+                defaultValue={tab}
+              >
+                {tabs.map((tab) => (
+                  <option key={tab.name} value={tab.href}>
+                    {tab.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="hidden py-4 sm:block">
+              <nav className="flex space-x-4" aria-label="Tabs">
+                {tabs.map((tab) => (
+                  <Link
+                    key={tab.name}
+                    className="relative rounded-md border border-white px-3 py-2 text-sm font-medium"
+                    href={tab.href}
+                    aria-current={
+                      tab.href === router.route ? "page" : undefined
+                    }
+                  >
+                    {tab.href === router.route && (
+                      <motion.span
+                        layoutId="tab"
+                        className="absolute inset-0 z-10 rounded-md bg-white mix-blend-difference"
+                        transition={{
+                          type: "spring",
+                          bounce: 0.2,
+                          duration: 0.6,
+                        }}
+                      />
+                    )}
+                    {tab.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+            <button
+              className="rounded-md border border-white px-3 py-2 text-sm font-medium"
+              type="button"
+            >
+              Dark
+            </button>
+          </header>
+          <Component {...pageProps} />
         </div>
       </div>
     </>
