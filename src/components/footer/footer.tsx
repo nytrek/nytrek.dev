@@ -26,7 +26,7 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
           </div>
         ))}
       </nav>
-      <div className="flex gap-x-10">
+      <div className="flex flex-wrap gap-10">
         {links.social.map((item) => (
           <Link
             key={item.name}

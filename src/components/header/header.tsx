@@ -83,7 +83,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       <div className="flex items-center gap-x-1.5">
         {locale === "en-US" && (
           <Link
-            className="flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium dark:border-white"
+            className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
             href={route}
             locale="sv-SE"
           >
@@ -97,7 +97,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
         )}
         {locale === "sv-SE" && (
           <Link
-            className="flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium dark:border-white"
+            className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
             href={route}
             locale="en-US"
           >
