@@ -23,7 +23,7 @@ export default function Page() {
         <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">
           I&apos;m Kenny -
         </h2>
-        <p className="max-w-2xl text-lg leading-8 text-zinc-300">
+        <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-300">
           an experienced developer with a passion for creating scalable and
           maintainable solutions.
         </p>
