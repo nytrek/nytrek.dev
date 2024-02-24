@@ -8,6 +8,7 @@ import { tabs } from "./data";
 
 /**
  * @see https://buildui.com/recipes/animated-tabs
+ * @see https://github.com/pacocoursey/next-themes/issues/245
  * @see https://github.com/pacocoursey/next-themes?tab=readme-ov-file#usetheme
  */
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
