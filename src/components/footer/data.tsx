@@ -1,7 +1,10 @@
 export const links = {
   main: [
     { name: "resume", href: "/cv.pdf" },
-    { name: "workout", href: "#" },
+    {
+      name: "workout",
+      href: "https://wealthy-soldier-a32.notion.site/Routines-456c07b06d9346e7ac891d528702200f",
+    },
     {
       name: "components",
       href: "https://storybook.nytrek.dev/",
