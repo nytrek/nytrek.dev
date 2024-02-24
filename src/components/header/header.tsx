@@ -44,11 +44,9 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = (props) => {
         >
           {tabs.map((tab) => (
             <option key={tab.name} value={tab.href}>
-              <span>{tab.emoji}</span>
+              {tab.emoji}
               &nbsp;&nbsp;
-              <span>
-                {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
-              </span>
+              {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
             </option>
           ))}
         </select>
