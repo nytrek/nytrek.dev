@@ -12,7 +12,7 @@ import { tabs } from "./data";
  * @see https://github.com/pacocoursey/next-themes?tab=readme-ov-file#usetheme
  */
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const { push, route } = useRouter();
+  const { push, route, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
   const tab = useMemo(() => {
     return tabs.find((tab) => tab.href === route)?.href;
@@ -64,31 +64,61 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
               ))}
             </nav>
           </div>
-          <button
-            className="rounded-md border border-zinc-900 px-3 py-2 text-sm font-medium dark:border-white"
-            onClick={() =>
-              theme === "system"
-                ? systemTheme === "dark"
-                  ? setTheme("light")
-                  : setTheme("dark")
-                : theme === "dark"
-                  ? setTheme("light")
-                  : setTheme("dark")
-            }
-            type="button"
-          >
-            {theme === "system" ? (
-              systemTheme === "dark" ? (
+          <div className="flex items-center gap-x-1.5">
+            {locale === "en-US" && (
+              <Link
+                className="flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium dark:border-white"
+                href={route}
+                locale="sv-SE"
+              >
+                EN
+                <img
+                  alt="locale"
+                  className="h-3.5 w-6"
+                  src="https://raw.githubusercontent.com/hampusborgos/country-flags/main/png100px/gb.png"
+                />
+              </Link>
+            )}
+            {locale === "sv-SE" && (
+              <Link
+                className="flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium dark:border-white"
+                href={route}
+                locale="en-US"
+              >
+                SE
+                <img
+                  alt="locale"
+                  className="h-3.5 w-[1.6rem]"
+                  src="https://raw.githubusercontent.com/hampusborgos/country-flags/main/png100px/se.png"
+                />
+              </Link>
+            )}
+            <button
+              className="rounded-md border border-zinc-900 px-3 py-2 font-medium dark:border-white"
+              onClick={() =>
+                theme === "system"
+                  ? systemTheme === "dark"
+                    ? setTheme("light")
+                    : setTheme("dark")
+                  : theme === "dark"
+                    ? setTheme("light")
+                    : setTheme("dark")
+              }
+              type="button"
+            >
+              {theme === "system" ? (
+                systemTheme === "dark" ? (
+                  <SunIcon className="w-6" />
+                ) : (
+                  <MoonIcon className="w-6" />
+                )
+              ) : theme === "dark" ? (
                 <SunIcon className="w-6" />
               ) : (
                 <MoonIcon className="w-6" />
-              )
-            ) : theme === "dark" ? (
-              <SunIcon className="w-6" />
-            ) : (
-              <MoonIcon className="w-6" />
-            )}
-          </button>
+              )}
+            </button>
+          </div>
         </header>
         {children}
       </div>
