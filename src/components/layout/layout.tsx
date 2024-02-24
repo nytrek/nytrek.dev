@@ -33,7 +33,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   };
   return (
     <div className="py-24 sm:py-32">
-      <div className="mx-auto grid max-w-7xl gap-y-6 px-6 lg:px-8">
+      <div className="mx-auto grid max-w-4xl gap-y-6 px-6 lg:px-8">
         <header className="flex items-center justify-between">
           <div className="sm:hidden">
             <label htmlFor="tabs" className="sr-only">
@@ -48,7 +48,11 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             >
               {tabs.map((tab) => (
                 <option key={tab.name} value={tab.href}>
-                  {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
+                  <span>{tab.emoji}</span>
+                  &nbsp;&nbsp;
+                  <span>
+                    {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
+                  </span>
                 </option>
               ))}
             </select>
@@ -58,7 +62,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
               {tabs.map((tab) => (
                 <button
                   key={tab.name}
-                  className="relative rounded-md border border-zinc-900 px-3 py-2.5 text-sm font-medium dark:border-white"
+                  className="relative flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2.5 text-sm font-medium dark:border-white"
                   onClick={() => handleDirection(tab.href)}
                 >
                   {tab.href === route && (
@@ -72,6 +76,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
                       }}
                     />
                   )}
+                  <span>{tab.emoji}</span>
                   {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
                 </button>
               ))}
