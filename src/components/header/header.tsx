@@ -1,5 +1,6 @@
 import { directionContext } from "@/context/direction";
 import useTranslate from "@/hooks/useTranslate";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
@@ -49,7 +50,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
             <option key={tab.name} value={tab.href}>
               {tab.emoji}
               &nbsp;&nbsp;
-              {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
+              {capitalizeFirstLetter(t(tab.name))}
             </option>
           ))}
         </select>
@@ -74,7 +75,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
                 />
               )}
               <span>{tab.emoji}</span>
-              {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
+              {capitalizeFirstLetter(t(tab.name))}
             </button>
           ))}
         </nav>

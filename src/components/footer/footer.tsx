@@ -2,6 +2,7 @@ import useTranslate from "@/hooks/useTranslate";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { links } from "./data";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 
 export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   className,
@@ -19,7 +20,7 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
-              {t(item.name).charAt(0).toUpperCase() + t(item.name).slice(1)}
+              {capitalizeFirstLetter(t(item.name))}
             </Link>
             <hr className="w-0 border-zinc-900 transition-all duration-300 group-hover:w-full dark:border-white" />
           </div>
@@ -40,8 +41,7 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       </div>
       <p className="text-xs leading-5">
         &copy; {new Date().getFullYear()} nytrek.dev.{" "}
-        {t("all rights reserved.").charAt(0).toUpperCase() +
-          t("all rights reserved.").slice(1)}
+        {capitalizeFirstLetter(t("all rights reserved."))}
       </p>
     </footer>
   );

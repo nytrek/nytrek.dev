@@ -1,4 +1,5 @@
 import useTranslate from "@/hooks/useTranslate";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -11,8 +12,7 @@ export default function Page() {
       </Head>
       <main className="grid gap-y-4">
         <span>
-          {t("welcome to my").charAt(0).toUpperCase() +
-            t("welcome to my").slice(1)}{" "}
+          {capitalizeFirstLetter(t("welcome to my"))}{" "}
           <Link
             className="underline hover:no-underline"
             href="https://maggieappleton.com/garden-history"
@@ -24,7 +24,7 @@ export default function Page() {
           🌱
         </span>
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          {t("i'm").charAt(0).toUpperCase() + t("i'm").slice(1)} Kenny -
+          {capitalizeFirstLetter(t("i'm"))} Kenny -
         </h1>
         <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-300">
           {t(

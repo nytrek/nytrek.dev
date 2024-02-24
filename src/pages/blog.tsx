@@ -1,18 +1,17 @@
-import Head from "next/head";
 import useTranslate from "@/hooks/useTranslate";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
+import Head from "next/head";
 
 export default function Page() {
   const t = useTranslate();
   return (
     <>
       <Head>
-        <title>
-          Kenny Tran - {t("blog").charAt(0).toUpperCase() + t("blog").slice(1)}
-        </title>
+        <title>Kenny Tran - {capitalizeFirstLetter(t("blog"))}</title>
       </Head>
       <main className="grid gap-y-4">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          {t("blog").charAt(0).toUpperCase() + t("blog").slice(1)}
+          {capitalizeFirstLetter(t("blog"))}
         </h1>
       </main>
     </>
