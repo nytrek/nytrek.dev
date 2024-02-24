@@ -10,7 +10,7 @@ export default function Page() {
       <Head>
         <title>Kenny Tran - {capitalizeFirstLetter(t("about me"))}</title>
       </Head>
-      <main className="grid gap-y-8">
+      <main className="grid gap-y-6">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           Hey there! 👋
         </h1>
