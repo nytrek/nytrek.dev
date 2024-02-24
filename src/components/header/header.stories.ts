@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Footer } from "./footer";
+import { Header } from "./header";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Footer",
-  component: Footer,
+  title: "Header",
+  component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   /**
@@ -18,7 +18,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Footer>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

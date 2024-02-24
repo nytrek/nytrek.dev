@@ -1,9 +1,9 @@
 export const links = {
   main: [
-    { name: "Resume", href: "/cv.pdf" },
-    { name: "Workout", href: "#" },
+    { name: "resume", href: "/cv.pdf" },
+    { name: "workout", href: "#" },
     {
-      name: "UI components",
+      name: "components",
       href: "https://storybook.nytrek.dev",
     },
   ],
@@ -70,4 +70,4 @@ export const links = {
       ),
     },
   ],
-};
+} as const;

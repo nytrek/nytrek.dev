@@ -6,7 +6,11 @@
     "projects": "projects",
     "welcome to my": "welcome to my",
     "i'm": "i'm",
-    "an experienced developer with a passion for creating scalable and maintainable solutions.": "an experienced developer with a passion for creating scalable and maintainable solutions."
+    "an experienced developer with a passion for creating scalable and maintainable solutions.": "an experienced developer with a passion for creating scalable and maintainable solutions.",
+    "resume": "resume",
+    "all rights reserved.": "all rights reserved.",
+    "workout": "workout",
+    "components": "components"
   },
   "sv-SE": {
     "home" : "hem",
@@ -15,6 +19,10 @@
     "projects": "projekt",
     "welcome to my": "välkommen till min",
     "i'm": "Jag är",
-    "an experienced developer with a passion for creating scalable and maintainable solutions.": "en erfaren utvecklare med en passion för att skapa skalbara och underhållbara lösningar."
+    "an experienced developer with a passion for creating scalable and maintainable solutions.": "en erfaren utvecklare med en passion för att skapa skalbara och underhållbara lösningar.",
+    "resume": "resume",
+    "all rights reserved.": "alla rättigheter förbehålls.",
+    "workout": "träningspass",
+    "components": "komponenter"
   }
 }
