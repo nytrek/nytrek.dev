@@ -1,6 +1,6 @@
 export const tabs = [
-  { name: "home", href: "/" },
-  { name: "about me", href: "/about-me" },
-  { name: "blog", href: "/blog" },
-  { name: "projects", href: "/projects" },
+  { id: 1, name: "home", href: "/" },
+  { id: 2, name: "about me", href: "/about-me" },
+  { id: 3, name: "blog", href: "/blog" },
+  { id: 4, name: "projects", href: "/projects" },
 ] as const;

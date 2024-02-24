@@ -1,11 +1,13 @@
+import { directionContext } from "@/context/direction";
 import useTranslate from "@/hooks/useTranslate";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { tabs } from "./data";
+import { variants } from "./variants";
 
 /**
  * @see https://buildui.com/recipes/animated-tabs
@@ -16,9 +18,19 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const t = useTranslate();
   const { push, route, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
-  const tab = useMemo(() => {
-    return tabs.find((tab) => tab.href === route)?.href;
+  const { direction, setDirection } = useContext(directionContext);
+  const currentTab = useMemo(() => {
+    return tabs.find((tab) => tab.href === route);
   }, [route]);
+  const handleDirection = (href: string) => {
+    push(href);
+    setDirection(
+      (tabs.find((item) => item.href === route)?.id as number) <
+        (tabs.find((item) => item.href === href)?.id as number)
+        ? "left"
+        : "right",
+    );
+  };
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-y-6 px-6 lg:px-8">
@@ -31,8 +43,8 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
               id="tabs"
               name="tabs"
               className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
-              onChange={(e) => push(e.target.value)}
-              value={tab}
+              onChange={(e) => handleDirection(e.target.value)}
+              value={currentTab?.href}
             >
               {tabs.map((tab) => (
                 <option key={tab.name} value={tab.href}>
@@ -44,11 +56,10 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
           <div className="hidden py-4 sm:block">
             <nav className="flex space-x-4" aria-label="Tabs">
               {tabs.map((tab) => (
-                <Link
+                <button
                   key={tab.name}
                   className="relative rounded-md border border-zinc-900 px-3 py-2.5 text-sm font-medium dark:border-white"
-                  href={tab.href}
-                  aria-current={tab.href === route ? "page" : undefined}
+                  onClick={() => handleDirection(tab.href)}
                 >
                   {tab.href === route && (
                     <motion.span
@@ -62,7 +73,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
                     />
                   )}
                   {t(tab.name).charAt(0).toUpperCase() + t(tab.name).slice(1)}
-                </Link>
+                </button>
               ))}
             </nav>
           </div>
@@ -122,7 +133,21 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             </button>
           </div>
         </header>
-        {children}
+        <AnimatePresence
+          initial={false}
+          mode="wait"
+          onExitComplete={() => window.scrollTo(0, 0)}
+        >
+          <motion.div
+            animate="animate"
+            exit="exit"
+            initial="initial"
+            key={route}
+            variants={variants(direction)}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { DirectionProvider } from "@/context/direction";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
@@ -28,14 +29,16 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <style jsx global>{`
-        html {
-          font-family: ${public_sans.style.fontFamily};
-        }
-      `}</style>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <DirectionProvider>
+        <style jsx global>{`
+          html {
+            font-family: ${public_sans.style.fontFamily};
+          }
+        `}</style>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </DirectionProvider>
     </ThemeProvider>
   );
 }
