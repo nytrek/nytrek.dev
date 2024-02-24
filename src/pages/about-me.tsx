@@ -12,7 +12,7 @@ export default function Page() {
       </Head>
       <main className="grid gap-y-8">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          Hey there!
+          Hey there! 👋
         </h1>
         <div className="grid gap-y-6 text-lg leading-8 text-zinc-600 dark:text-zinc-300">
           <p>
