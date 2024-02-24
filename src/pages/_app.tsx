@@ -41,14 +41,14 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl gap-y-6 lg:mx-0">
             <header>
-              <div className="text-zinc-900 sm:hidden">
+              <div className="sm:hidden">
                 <label htmlFor="tabs" className="sr-only">
                   Select a tab
                 </label>
                 <select
                   id="tabs"
                   name="tabs"
-                  className="block w-full rounded-md border-zinc-300 focus:border-zinc-500 focus:ring-zinc-500"
+                  className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
                   onChange={(e) => router.push(e.target.value)}
                   defaultValue={tab}
                 >
