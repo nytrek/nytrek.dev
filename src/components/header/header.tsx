@@ -33,6 +33,7 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   return (
     <header
       className={cn("flex items-center justify-between", className)}
+      data-testid="header"
       {...props}
     >
       <div className="sm:hidden">
