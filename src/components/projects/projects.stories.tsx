@@ -23,14 +23,15 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
-  args: {
-    className:
-      "bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white p-6 rounded-lg border border-zinc-300",
-  },
   /**
    * @see https://storybook.js.org/docs/essentials/toolbars-and-globals
    */
   render: (_args, { globals: { locale } }) => {
-    return <Projects locale={locale} />;
+    return (
+      <Projects
+        className="rounded-lg border border-zinc-300 bg-white p-6 text-zinc-900 dark:bg-zinc-900 dark:text-white"
+        locale={locale}
+      />
+    );
   },
 };
