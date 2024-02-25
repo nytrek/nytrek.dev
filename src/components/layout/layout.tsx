@@ -7,13 +7,18 @@ import { Footer } from "../footer";
 import { Header } from "../header";
 import { tabs } from "../header/data";
 import { variants } from "./variants";
+import { cn } from "@/utils/cn";
 
 /**
  * @see https://buildui.com/recipes/animated-tabs
  * @see https://github.com/pacocoursey/next-themes/issues/245
  * @see https://github.com/pacocoursey/next-themes?tab=readme-ov-file#usetheme
  */
-export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const Layout: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   const { push, route } = useRouter();
   const { direction, setDirection } = useContext(directionContext);
   const onSwipe = (swipe: "left" | "right") => {
@@ -33,7 +38,12 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
       !tabs.findIndex((item) => item.href === route) ? null : onSwipe("right"),
   });
   return (
-    <div className="py-24 sm:py-32" {...swipeHandlers}>
+    <div
+      className={cn("py-24 sm:py-32", className)}
+      data-testid="layout"
+      {...props}
+      {...swipeHandlers}
+    >
       <div className="mx-auto grid max-w-4xl gap-y-6 px-6 lg:px-8">
         <Header />
         <AnimatePresence
