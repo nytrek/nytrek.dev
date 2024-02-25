@@ -21,10 +21,10 @@ describe("<Header/>", () => {
       route: "/",
       locale: "en-US",
     }));
-    render(<Header />);
   });
 
   it("renders without crashing", () => {
+    render(<Header />);
     // Verify that the component renders without crashing
     expect(screen.getByTestId("header")).toBeInTheDocument();
   });

@@ -15,12 +15,12 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       data-testid="footer"
       {...props}
     >
-      <nav className="-mb-6 grid grid-cols-2" aria-label="Footer">
+      <nav aria-label="Footer" className="-mb-6 grid grid-cols-2">
         {links.main.map((item) => (
-          <div key={item.name} className="group w-fit pb-6">
+          <div className="group w-fit pb-6" key={item.name}>
             <Link
-              href={item.href}
               className="text-sm leading-6"
+              href={item.href}
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
@@ -33,13 +33,13 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       <div className="flex flex-wrap gap-10">
         {links.social.map((item) => (
           <Link
-            key={item.name}
             href={item.href}
+            key={item.name}
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             <span className="sr-only">{item.name}</span>
-            <item.icon className="h-6 w-6" aria-hidden="true" />
+            <item.icon aria-hidden="true" className="h-6 w-6" />
           </Link>
         ))}
       </div>

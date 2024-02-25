@@ -21,10 +21,10 @@ describe("<Layout/>", () => {
       route: "/",
       locale: "en-US",
     }));
-    render(<Layout />);
   });
 
   it("renders without crashing", () => {
+    render(<Layout />);
     // Verify that the component renders without crashing
     expect(screen.getByTestId("layout")).toBeInTheDocument();
   });

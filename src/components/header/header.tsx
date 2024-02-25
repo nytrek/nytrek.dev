@@ -37,13 +37,13 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
       {...props}
     >
       <div className="sm:hidden">
-        <label htmlFor="tabs" className="sr-only">
+        <label className="sr-only" htmlFor="tabs">
           Select a tab
         </label>
         <select
+          className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md border-zinc-300 text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500"
           onChange={(e) => handleDirection(e.target.value)}
           value={currentTab?.href}
         >
@@ -57,17 +57,17 @@ export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
         </select>
       </div>
       <div className="hidden py-4 sm:block">
-        <nav className="flex gap-x-4" aria-label="Tabs">
+        <nav aria-label="Tabs" className="flex gap-x-4">
           {tabs.map((tab) => (
             <button
-              key={tab.name}
               className="relative flex items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2.5 text-sm font-medium dark:border-white"
+              key={tab.name}
               onClick={() => handleDirection(tab.href)}
             >
               {tab.href === route && (
                 <motion.span
-                  layoutId="tab"
                   className="absolute inset-0 z-10 rounded-md bg-white mix-blend-difference"
+                  layoutId="tab"
                   transition={{
                     type: "spring",
                     bounce: 0.2,

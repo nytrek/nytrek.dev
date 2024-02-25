@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <DirectionProvider>
-        <style jsx global>{`
+        <style global jsx>{`
           html {
             font-family: ${public_sans.style.fontFamily};
           }

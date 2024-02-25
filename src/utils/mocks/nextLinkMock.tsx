@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * @description ChatGPT generated snippet
  */

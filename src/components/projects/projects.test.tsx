@@ -21,10 +21,10 @@ describe("<Projects/>", () => {
       route: "/",
       locale: "en-US",
     }));
-    render(<Projects />);
   });
 
   it("renders without crashing", () => {
+    render(<Projects />);
     // Verify that the component renders without crashing
     expect(screen.getByTestId("projects")).toBeInTheDocument();
   });
