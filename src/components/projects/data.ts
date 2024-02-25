@@ -32,7 +32,7 @@ export const projects = [
     name: "tree graph",
     description: "visualize hierarchical data",
     emoji: "🌲",
-    href: "https://playground.nytrek.dev/",
+    href: "https://tree.nytrek.dev/",
   },
   {
     id: 6,
