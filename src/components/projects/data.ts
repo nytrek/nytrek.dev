@@ -39,6 +39,6 @@ export const projects = [
     name: "lab portal",
     description: "digital portal for lab analysis and testing",
     emoji: "💊",
-    href: "https://playground.nytrek.dev/",
+    href: "https://labbportal.provsvaret.com/",
   },
 ] as const;
