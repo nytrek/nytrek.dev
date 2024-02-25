@@ -1,15 +1,14 @@
-import useTranslate from "@/hooks/useTranslate";
+import useTranslate, { type Locale } from "@/hooks/useTranslate";
 import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { projects } from "./data";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
-  className,
-  ...props
-}) => {
-  const t = useTranslate();
+export const Projects: React.FC<
+  React.HTMLAttributes<HTMLUListElement> & { locale?: Locale }
+> = ({ className, locale, ...props }) => {
+  const t = useTranslate(locale);
   return (
     <ul
       className={cn("grid gap-6 sm:grid-cols-2", className)}

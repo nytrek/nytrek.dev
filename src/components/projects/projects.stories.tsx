@@ -13,9 +13,7 @@ const meta = {
    */
   parameters: {
     nextjs: {
-      router: {
-        locale: "en-US",
-      },
+      router: {},
     },
   },
 } satisfies Meta<typeof Projects>;
@@ -28,5 +26,11 @@ export const Default: Story = {
   args: {
     className:
       "bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white p-6 rounded-lg border border-zinc-300",
+  },
+  /**
+   * @see https://storybook.js.org/docs/essentials/toolbars-and-globals
+   */
+  render: (_args, { globals: { locale } }) => {
+    return <Projects locale={locale} />;
   },
 };

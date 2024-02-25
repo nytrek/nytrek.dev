@@ -2,6 +2,21 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/react";
 import "../src/styles/globals.css";
 
+export const globalTypes = {
+  locale: {
+    name: "Locale",
+    description: "Select the language",
+    toolbar: {
+      icon: "globe",
+      items: [
+        { value: "en-US", title: "English" },
+        { value: "sv-SE", title: "Svenska" },
+      ],
+      showName: true,
+    },
+  },
+};
+
 export const decorators = [
   withThemeByClassName({
     themes: {
