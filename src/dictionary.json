@@ -14,7 +14,11 @@
     "personal website": "personal website",
     "real estate listings": "real estate listings",
     "a platform for playing chess with others": "a platform for playing chess with others",
-    "a monaco editor with AI capabilities": "a monaco editor with AI capabilities"
+    "a monaco editor with AI capabilities": "a monaco editor with AI capabilities",
+    "tree graph": "tree graph",
+    "visualize hierarchical data": "visualize hierarchical data",
+    "lab portal": "lab portal",
+    "digital portal for lab analysis and testing": "digital portal for lab analysis and testing"
   },
   "sv-SE": {
     "home" : "hem",
@@ -31,6 +35,10 @@
     "personal website": "personlig webbplats",
     "real estate listings": "fastighets annonser",
     "a platform for playing chess with others": "en platform för att spela schack med andra",
-    "a monaco editor with AI capabilities": "en monaco redigerare med AI förmågor"
+    "a monaco editor with AI capabilities": "en monaco redigerare med AI förmågor",
+    "tree graph": "träd graf",
+    "visualize hierarchical data": "visualisera hierarkisk data",
+    "lab portal": "labb portal",
+    "digital portal for lab analysis and testing": "digital portal för laboratorieanalys och testning"
   }
 }

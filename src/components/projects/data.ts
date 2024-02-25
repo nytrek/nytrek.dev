@@ -27,4 +27,18 @@ export const projects = [
     emoji: "✨",
     href: "https://playground.nytrek.dev/",
   },
+  {
+    id: 5,
+    name: "tree graph",
+    description: "visualize hierarchical data",
+    emoji: "🌲",
+    href: "https://playground.nytrek.dev/",
+  },
+  {
+    id: 6,
+    name: "lab portal",
+    description: "digital portal for lab analysis and testing",
+    emoji: "💊",
+    href: "https://playground.nytrek.dev/",
+  },
 ] as const;
