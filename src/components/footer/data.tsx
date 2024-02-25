@@ -26,7 +26,7 @@ export const links = {
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/nytrek.dev",
       icon: (props: React.HTMLAttributes<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
