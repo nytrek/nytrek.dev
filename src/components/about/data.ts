@@ -1,0 +1,26 @@
+export const content = [
+  `I'm Kenny Tran, a seasoned developer with a passion for crafting
+innovative and scalable solutions. With over three years of experience
+in the dynamic realm of full-stack development, I thrive on the
+excitement of building something new and tackling fresh challenges
+head-on.`,
+  `In my professional journey, I've collaborated closely with diverse
+teams, from product owners to graphic designers, translating intricate
+product strategies into tangible, sustainable solutions. Whether it's
+developing modern websites for international clients or architecting
+robust SaaS platforms like Bostadsval for real estate listings, I've
+consistently strived for excellence in every project I undertake.`,
+  `Outside of the tech realm, I'm fluent in both English and Swedish, and I
+cherish moments spent connecting with others on a personal level.
+Whether it's mentoring junior colleagues, coordinating integrations
+between programs, or simply engaging in meaningful conversations, I
+believe in fostering strong relationships built on trust, respect, and
+collaboration.`,
+  `I'm excited about the opportunity to connect with like-minded
+individuals who share my enthusiasm for innovation and growth, whether
+it's in the professional arena or beyond. If you're interested in
+exploring potential collaborations, discussing tech trends, or simply
+grabbing a coffee and exchanging ideas, feel free to reach out! I'm
+always up for a stimulating conversation or an exciting coding
+challenge.`,
+];
