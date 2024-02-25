@@ -11,7 +11,11 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
 }) => {
   const t = useTranslate();
   return (
-    <ul className={cn("grid gap-6 sm:grid-cols-2", className)} {...props}>
+    <ul
+      className={cn("grid gap-6 sm:grid-cols-2", className)}
+      data-testid="projects"
+      {...props}
+    >
       {projects.map((item) => (
         <li key={item.name}>
           <Link

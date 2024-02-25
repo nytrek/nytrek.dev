@@ -10,7 +10,11 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
 }) => {
   const t = useTranslate();
   return (
-    <footer className={cn("grid gap-y-10", className)} {...props}>
+    <footer
+      className={cn("grid gap-y-10", className)}
+      data-testid="footer"
+      {...props}
+    >
       <nav className="-mb-6 grid grid-cols-2" aria-label="Footer">
         {links.main.map((item) => (
           <div key={item.name} className="group w-fit pb-6">
