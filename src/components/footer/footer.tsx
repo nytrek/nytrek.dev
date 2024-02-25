@@ -39,7 +39,7 @@ export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
             target="_blank"
           >
             <span className="sr-only">{item.name}</span>
-            <item.icon aria-hidden="true" className="h-6 w-6" />
+            <item.icon aria-hidden="true" className="w-6" />
           </Link>
         ))}
       </div>

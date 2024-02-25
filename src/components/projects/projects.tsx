@@ -35,7 +35,7 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
                 {capitalizeFirstLetter(t(item.description))}
               </span>
             </span>
-            <ArrowUpRightIcon className="absolute right-4 top-4 h-6 w-6 sm:h-4 sm:w-4" />
+            <ArrowUpRightIcon className="absolute right-4 top-4 w-6 sm:w-4" />
           </Link>
         </li>
       ))}
