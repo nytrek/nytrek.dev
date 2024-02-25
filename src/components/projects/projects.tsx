@@ -6,9 +6,9 @@ import Link from "next/link";
 import { projects } from "./data";
 
 export const Projects: React.FC<
-  React.HTMLAttributes<HTMLUListElement> & { locale?: Locale }
-> = ({ className, locale, ...props }) => {
-  const t = useTranslate(locale);
+  React.HTMLAttributes<HTMLUListElement> & { l?: Locale }
+> = ({ className, l, ...props }) => {
+  const t = useTranslate(l);
   return (
     <ul
       className={cn("grid gap-6 sm:grid-cols-2", className)}

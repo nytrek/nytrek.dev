@@ -1,5 +1,5 @@
 import { directionContext } from "@/context/direction";
-import useTranslate from "@/hooks/useTranslate";
+import useTranslate, { type Locale } from "@/hooks/useTranslate";
 import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
@@ -10,11 +10,10 @@ import { useRouter } from "next/router";
 import { useContext, useMemo } from "react";
 import { tabs } from "./data";
 
-export const Header: React.FC<React.HTMLAttributes<HTMLElement>> = ({
-  className,
-  ...props
-}) => {
-  const t = useTranslate();
+export const Header: React.FC<
+  React.HTMLAttributes<HTMLElement> & { l?: Locale }
+> = ({ className, l, ...props }) => {
+  const t = useTranslate(l);
   const { push, route, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
   const { setDirection } = useContext(directionContext);

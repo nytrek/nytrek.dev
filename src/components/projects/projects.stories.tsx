@@ -30,7 +30,7 @@ export const Default: Story = {
     return (
       <Projects
         className="rounded-lg border border-zinc-300 bg-white p-6 text-zinc-900 dark:bg-zinc-900 dark:text-white"
-        locale={locale}
+        l={locale}
       />
     );
   },

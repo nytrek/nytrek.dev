@@ -13,9 +13,7 @@ const meta = {
    */
   parameters: {
     nextjs: {
-      router: {
-        locale: "en-US",
-      },
+      router: {},
     },
   },
 } satisfies Meta<typeof Layout>;

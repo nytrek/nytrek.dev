@@ -1,14 +1,13 @@
-import useTranslate from "@/hooks/useTranslate";
+import useTranslate, { type Locale } from "@/hooks/useTranslate";
+import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { links } from "./data";
-import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 
-export const Footer: React.FC<React.HTMLAttributes<HTMLElement>> = ({
-  className,
-  ...props
-}) => {
-  const t = useTranslate();
+export const Footer: React.FC<
+  React.HTMLAttributes<HTMLElement> & { l?: Locale }
+> = ({ className, l, ...props }) => {
+  const t = useTranslate(l);
   return (
     <footer
       className={cn("grid gap-y-10", className)}
