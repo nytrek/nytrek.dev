@@ -8,6 +8,7 @@ import "../src/styles/globals.css";
 export const globalTypes = {
   locale: {
     name: "Locale",
+    defaultValue: "en-US",
     description: "Select the language",
     toolbar: {
       icon: "globe",
