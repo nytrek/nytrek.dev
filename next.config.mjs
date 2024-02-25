@@ -1,5 +1,9 @@
+import remarkGfm from 'remark-gfm'
+import createMDX from '@next/mdx'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   /**
    * @see https://nextjs.org/docs/pages/building-your-application/routing/internationalization
@@ -17,4 +21,16 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+/**
+ * @see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#remark-and-rehype-plugins
+ */
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+  },
+})
+ 
+// Merge MDX config with Next.js config
+export default withMDX(nextConfig)
