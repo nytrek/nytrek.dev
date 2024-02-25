@@ -3,6 +3,7 @@ import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { projects } from "./data";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
   className,
@@ -14,7 +15,7 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
       {projects.map((item) => (
         <li key={item.name}>
           <Link
-            className="flex flex-col gap-3.5 rounded-md border border-zinc-900 px-3 py-2.5 md:flex-row md:items-center dark:border-white"
+            className="relative flex flex-col gap-3.5 rounded-md border border-zinc-900 px-3 py-2.5 md:flex-row md:items-center dark:border-white"
             href={item.href}
             rel="nofollow noopener noreferrer"
             target="_blank"
@@ -30,6 +31,7 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
                 {capitalizeFirstLetter(t(item.description))}
               </span>
             </span>
+            <ArrowUpRightIcon className="absolute right-4 top-4 h-6 w-6 sm:h-4 sm:w-4" />
           </Link>
         </li>
       ))}
