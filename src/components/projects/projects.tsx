@@ -14,12 +14,12 @@ export const Projects: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
       {projects.map((item) => (
         <li key={item.name}>
           <Link
-            className="flex items-center gap-x-3.5 rounded-md border border-zinc-900 px-3 py-2.5 dark:border-white"
+            className="flex flex-col gap-3.5 rounded-md border border-zinc-900 px-3 py-2.5 md:flex-row md:items-center dark:border-white"
             href={item.href}
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
-            <span className="rounded-full border border-dashed border-zinc-900 px-3 py-2 text-2xl dark:border-white">
+            <span className="w-fit rounded-full border border-dashed border-zinc-900 px-3 py-2 text-2xl dark:border-white">
               {item.emoji}
             </span>
             <span className="flex flex-col">
