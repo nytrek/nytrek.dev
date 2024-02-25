@@ -1,6 +1,4 @@
 import Head from "next/head";
-import useTranslate from "@/hooks/useTranslate";
-import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 
 # About me
 
@@ -33,11 +31,10 @@ always up for a stimulating conversation or an exciting coding
 challenge.
 
 export default function MDXPage({ children }) {
-  const t = useTranslate();
   return (
     <>
       <Head>
-        <title>Kenny Tran - {capitalizeFirstLetter(t("about me"))}</title>
+        <title>Kenny Tran - About me</title>
       </Head>
       <div className="prose xl:prose-xl dark:prose-invert">{children}</div>
     </>
