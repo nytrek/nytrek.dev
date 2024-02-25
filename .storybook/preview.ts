@@ -2,6 +2,9 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/react";
 import "../src/styles/globals.css";
 
+/**
+ * @see https://storybook.js.org/docs/essentials/toolbars-and-globals
+ */
 export const globalTypes = {
   locale: {
     name: "Locale",
