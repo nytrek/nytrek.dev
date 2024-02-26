@@ -9,7 +9,7 @@ import type {
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import path from "path";
 import remarkGfm from "remark-gfm";
 
@@ -79,14 +79,15 @@ export default function BlogPost({
   source,
   frontMatter,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { back } = useRouter();
   return (
     <>
       <Head>
         <title>Kenny Tran</title>
       </Head>
-      <Link href="/blog">
+      <button onClick={() => back()} type="button">
         <ArrowLongLeftIcon className="w-8 sm:w-12" />
-      </Link>
+      </button>
       <article className="prose xl:prose-xl dark:prose-invert">
         <h1>{frontMatter.title}</h1>
         <MDXRemote
