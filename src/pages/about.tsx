@@ -43,7 +43,16 @@ export default function BlogPost({
       </Head>
       <article className="prose xl:prose-xl dark:prose-invert">
         <h1>{frontMatter.title}</h1>
-        <MDXRemote {...source} />
+        <MDXRemote
+          {...source}
+          components={{
+            a: ({ children, ...props }) => (
+              <a rel="nofollow noopener noreferrer" target="_blank" {...props}>
+                {children}
+              </a>
+            ),
+          }}
+        />
       </article>
     </>
   );
