@@ -4,6 +4,10 @@ import { render, screen } from "@testing-library/react";
 import { useRouter } from "next/router";
 import { Footer } from ".";
 
+/**
+ * @description The contents of this test has been generated using ChatGPT
+ */
+
 // Mock useRouter
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),
@@ -14,9 +18,6 @@ jest.mock("next/link", () => NextLinkMock);
 
 describe("<Footer/>", () => {
   beforeEach(() => {
-    /**
-     * @description ChatGPT generated snippet
-     */
     (useRouter as jest.Mock).mockImplementation(() => ({
       route: "/",
       locale: "en-US",

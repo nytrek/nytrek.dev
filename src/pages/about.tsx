@@ -8,6 +8,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import path from "path";
 
+/**
+ * @description The contents of this test has been generated using ChatGPT
+ */
+
 // Function to fetch MDX content
 export const getStaticProps = (async (context) => {
   const { locale } = context;

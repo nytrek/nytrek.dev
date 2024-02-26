@@ -13,6 +13,10 @@ import Link from "next/link";
 import path from "path";
 import remarkGfm from "remark-gfm";
 
+/**
+ * @description The contents of this page has been generated using ChatGPT
+ */
+
 // Function to fetch MDX content
 export const getStaticProps = (async (context) => {
   const { locale, params } = context;
@@ -63,8 +67,6 @@ export const getStaticPaths = (async (context) => {
       }));
     paths = paths.concat(localePaths);
   }
-
-  console.log(paths);
 
   return {
     paths,
