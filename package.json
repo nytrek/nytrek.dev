@@ -23,7 +23,7 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^3.0.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",

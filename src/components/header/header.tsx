@@ -14,7 +14,7 @@ export const Header: React.FC<
   React.HTMLAttributes<HTMLElement> & { l?: Locale }
 > = ({ className, l, ...props }) => {
   const t = useTranslate(l);
-  const { push, route, locale } = useRouter();
+  const { push, route, query, locale } = useRouter();
   const { theme, setTheme, systemTheme } = useTheme();
   const { setDirection } = useContext(directionContext);
   const currentTab = useMemo(() => {
@@ -84,7 +84,10 @@ export const Header: React.FC<
         {locale === "en-US" && (
           <Link
             className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
-            href={route}
+            href={{
+              href: route,
+              query: query,
+            }}
             locale="sv-SE"
           >
             EN
@@ -98,7 +101,10 @@ export const Header: React.FC<
         {locale === "sv-SE" && (
           <Link
             className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
-            href={route}
+            href={{
+              href: route,
+              query: query,
+            }}
             locale="en-US"
           >
             SE
