@@ -3,7 +3,7 @@ import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { cn } from "@/utils/cn";
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
