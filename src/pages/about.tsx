@@ -9,7 +9,7 @@ import Head from "next/head";
 import path from "path";
 
 /**
- * @description The contents of this test has been generated using ChatGPT
+ * @description The contents of this page has been generated using ChatGPT
  */
 
 // Function to fetch MDX content
