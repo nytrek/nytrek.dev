@@ -1,4 +1,5 @@
 import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
+import rehypePrism from "@mapbox/rehype-prism";
 import fs from "fs";
 import matter from "gray-matter";
 import type {
@@ -36,6 +37,7 @@ export const getStaticProps = (async (context) => {
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypePrism], //https://stackoverflow.com/questions/65628350/mdx-syntax-highlighting-is-not-working-in-next-js
     },
   });
 
