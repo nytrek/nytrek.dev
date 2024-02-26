@@ -77,8 +77,11 @@ export default function Page({
           {capitalizeFirstLetter(t("blog"))}
         </h1>
         <p className="text-lg leading-8">
-          Dive into a lush oasis of thoughts and discoveries where I cultivate
-          ideas on tech, creativity, and everything in between.
+          {capitalizeFirstLetter(
+            t(
+              "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.",
+            ),
+          )}
         </p>
         {Object.entries(postsByYear).map(([year, posts]) => (
           <div className="grid gap-y-6" key={year}>
