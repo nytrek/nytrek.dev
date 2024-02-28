@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useMemo } from "react";
 import { tabs } from "./data";
+import directionary from "../../dictionary.json";
 
 export const Header: React.FC<
   React.HTMLAttributes<HTMLElement> & { l?: Locale }
@@ -86,7 +87,13 @@ export const Header: React.FC<
             className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
             href={{
               href: route,
-              query: query,
+              query: query.slug
+                ? {
+                    slug: directionary["sv-SE"][
+                      query.slug as keyof (typeof directionary)["sv-SE"]
+                    ],
+                  }
+                : query,
             }}
             locale="sv-SE"
           >
@@ -103,7 +110,13 @@ export const Header: React.FC<
             className="hidden items-center gap-x-1.5 rounded-md border border-zinc-900 px-3 py-2 font-medium sm:flex dark:border-white"
             href={{
               href: route,
-              query: query,
+              query: query.slug
+                ? {
+                    slug: directionary["en-US"][
+                      query.slug as keyof (typeof directionary)["en-US"]
+                    ],
+                  }
+                : query,
             }}
             locale="en-US"
           >

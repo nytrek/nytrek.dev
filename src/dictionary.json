@@ -17,7 +17,9 @@
     "a monaco editor with AI capabilities": "a monaco editor with AI capabilities",
     "visualize hierarchical data": "visualize hierarchical data",
     "digital portal for lab analysis and testing": "digital portal for lab analysis and testing",
-    "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.": "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond."
+    "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.": "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.",
+    "building-your-own-digital-garden": "building-your-own-digital-garden",
+    "bygg-din-egen-digitala-tradgard":  "building-your-own-digital-garden"
   },
   "sv-SE": {
     "home" : "hem",
@@ -37,6 +39,8 @@
     "a monaco editor with AI capabilities": "en monaco redigerare med AI förmågor",
     "visualize hierarchical data": "visualisera hierarkisk data",
     "digital portal for lab analysis and testing": "digital portal för laboratorieanalys och testning",
-    "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.": "välkommen till min bloggsida! Här hittar du en samling av mina tankar, erfarenheter och insikter om allt från teknik, utveckling och mer därtill. "
+    "welcome to my blog page! Here, you'll find a collection of my thoughts, experiences, and insights on all things tech, development, and beyond.": "välkommen till min bloggsida! Här hittar du en samling av mina tankar, erfarenheter och insikter om allt från teknik, utveckling och mer därtill.",
+    "building-your-own-digital-garden": "bygg-din-egen-digitala-tradgard",
+    "bygg-din-egen-digitala-tradgard": "bygg-din-egen-digitala-tradgard"
   }
 }
