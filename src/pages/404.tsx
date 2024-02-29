@@ -10,8 +10,8 @@ export default function Custom404() {
       className="mx-auto"
       height={260}
       priority
-      src="/illustration_404.png"
       sizes="100%"
+      src="/illustration_404.png"
       width={356}
     />
   );

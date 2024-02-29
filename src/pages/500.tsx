@@ -10,8 +10,8 @@ export default function Custom500() {
       className="mx-auto"
       height={260}
       priority
-      src="/illustration_500.png"
       sizes="100%"
+      src="/illustration_500.png"
       width={348}
     />
   );
