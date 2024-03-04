@@ -30,7 +30,7 @@ export const projects = [
   {
     id: 5,
     name: "lab portal",
-    description: "digital portal for lab analysis and testing",
+    description: "portal for lab analysis and testing",
     emoji: "💊",
     href: "https://labbportal.provsvaret.com/",
   },
