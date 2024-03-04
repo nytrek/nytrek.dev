@@ -34,4 +34,11 @@ export const projects = [
     emoji: "💊",
     href: "https://labbportal.provsvaret.com/",
   },
+  {
+    id: 6,
+    name: "telnect",
+    description: "main dashboard for API integration",
+    emoji: "🎯",
+    href: "https://dashboard.telnect.com/",
+  },
 ] as const;
