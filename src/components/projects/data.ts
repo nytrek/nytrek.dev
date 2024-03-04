@@ -29,10 +29,10 @@ export const projects = [
   },
   {
     id: 5,
-    name: "tree graph",
-    description: "visualize hierarchical data",
-    emoji: "🌲",
-    href: "https://tree.nytrek.dev/",
+    name: "finslipa",
+    description: "digital agency",
+    emoji: "🎨",
+    href: "https://www.finslipa.se/",
   },
   {
     id: 6,
