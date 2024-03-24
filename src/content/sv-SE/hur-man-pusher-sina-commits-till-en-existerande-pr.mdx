@@ -1,0 +1,38 @@
+---
+title: Hur man pushar sina commits till en existerande pull request 🚀
+date: "2024-03-23"
+---
+
+## Förstå Git-arbetsflödet 🔄
+
+Innan vi ger oss ut på vår resa, låt oss snabbt repetera några väsentliga Git-kommandon:
+
+### `git fetch`
+
+Detta kommando hämtar ändringar från en fjärrrepository och låter dig se vad andra har gjort utan att sammanfoga dem med dina egna grenar.
+
+### `git log`
+
+`git log` visar commit-loggar och låter dig granska historiken över commits i din repository. Det är ett utmärkt verktyg för att förstå utvecklingen av ditt projekt.
+
+### `git rebase`
+
+`git rebase` är ett kraftfullt kommando som används för att återapplicera commits ovanpå en annan baspunkt. Det är praktiskt för att hålla din commit-historik ren och linjär, särskilt när du samarbetar med andra.
+
+Nu när vi har våra verktyg vassade, låt oss ta oss an huvuduppgiften!
+
+## Pusha commits till en befintlig pull request 🛠️
+
+Här är en steg-för-steg-guide för att sömlöst pusha dina commits till en befintlig pull request:
+
+1. **Hämta de senaste ändringarna:** Börja med att hämta de senaste ändringarna från den fjärrstyrda repositoryn med `git fetch`. Detta säkerställer att du arbetar med den mest uppdaterade kodbasen.
+
+2. **Kontrollera commit-historiken:** Granska commit-historiken med `git log` för att förstå de senaste ändringarna och hur dina commits passar in i det större sammanhanget.
+
+3. **Rebasa din gren:** Utför `git rebase` för att återapplicera dina commits ovanpå de senaste ändringarna från huvudgrenen. Detta håller din commit-historik ren och undviker onödiga sammanslagnings-commits.
+
+4. **Lös eventuella konflikter:** Om det uppstår konflikter under rebasningsprocessen, kommer Git att be dig att lösa dem manuellt. Ta din tid att lösa eventuella konflikter och säkerställa en smidig rebasning.
+
+5. **Pusha dina ändringar:** Slutligen, pusha dina rebasade commits till den fjärrstyrda repositoryn med git push origin `<branch-name>`. Detta uppdaterar den befintliga pull requesten med dina senaste ändringar.
+
+Och där har du det! Genom att följa dessa enkla steg kan du utan problem pusha dina commits till en befintlig pull request och bidra till samarbetsprojekt som en professionell. 🌟

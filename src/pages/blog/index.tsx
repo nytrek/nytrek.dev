@@ -53,6 +53,9 @@ export const getStaticProps = (async (context) => {
   };
 }) as GetStaticProps;
 
+/**
+ * @see https://stackoverflow.com/questions/10123953/how-to-sort-an-object-array-by-date-property
+ */
 export default function Page({
   blogPosts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -89,21 +92,26 @@ export default function Page({
               {year}
             </h2>
             <ul>
-              {posts.map((post, index) => (
-                <li key={post.slug}>
-                  <Link
-                    as={`/blog/${post.slug}`}
-                    className={cn(
-                      index && "pt-3",
-                      "flex items-center justify-between text-zinc-600 dark:text-zinc-300",
-                    )}
-                    href="/blog/[slug]"
-                  >
-                    <span>{post.title}</span>
-                    <span className="hidden sm:inline">{post.date}</span>
-                  </Link>
-                </li>
-              ))}
+              {posts
+                .sort(
+                  (a, b) =>
+                    new Date(b.date).getTime() - new Date(a.date).getTime(),
+                )
+                .map((post, index) => (
+                  <li key={post.slug}>
+                    <Link
+                      as={`/blog/${post.slug}`}
+                      className={cn(
+                        index && "pt-3",
+                        "flex items-center justify-between text-zinc-600 dark:text-zinc-300",
+                      )}
+                      href="/blog/[slug]"
+                    >
+                      <span>{post.title}</span>
+                      <span className="hidden sm:inline">{post.date}</span>
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
         ))}

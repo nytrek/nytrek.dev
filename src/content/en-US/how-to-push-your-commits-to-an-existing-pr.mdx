@@ -1,0 +1,38 @@
+---
+title: How to Push Your Commits to an Existing Pull Request 🚀
+date: "2024-03-23"
+---
+
+## Understanding Git Workflow 🔄
+
+Before we embark on our journey, let's quickly recap some essential Git commands:
+
+### `git fetch`
+
+This command fetches changes from a remote repository, enabling you to see what others have been up to without merging them into your own branches.
+
+### `git log`
+
+`git log` shows the commit logs, allowing you to review the history of commits in your repository. It's a great tool for understanding the evolution of your project.
+
+### `git rebase`
+
+`git rebase` is a powerful command used to reapply commits on top of another base tip. It's handy for keeping your commit history clean and linear, especially when collaborating with others.
+
+Now that we have our tools sharpened, let's tackle the main task at hand!
+
+## Pushing Commits to an Existing Pull Request 🛠️
+
+Here's a step-by-step guide to seamlessly push your commits to an existing pull request:
+
+1. **Fetch the Latest Changes:** Start by fetching the latest changes from the upstream repository using `git fetch`. This ensures you're working with the most up-to-date codebase.
+
+2. **Check the Commit History:** Review the commit history with `git log` to understand recent changes and how your commits fit into the overall picture.
+
+3. **Rebase Your Branch:** Execute `git rebase` to reapply your commits on top of the latest changes from the main branch. This action keeps your commit history clean and avoids unnecessary merge commits.
+
+4. **Resolve any Conflicts:** If there are any conflicts during the rebase process, Git will prompt you to resolve them manually. Take your time to address any conflicts and ensure a smooth rebase.
+
+5. **Push Your Changes:** Finally, push your rebased commits to the remote repository using git push origin `<branch-name>`. This updates the existing pull request with your latest changes.
+
+And there you have it! By following these simple steps, you can effortlessly push your commits to an existing pull request and contribute to collaborative projects like a pro. 🌟
