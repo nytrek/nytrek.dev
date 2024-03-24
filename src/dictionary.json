@@ -20,7 +20,9 @@
     "building-your-own-digital-garden": "building-your-own-digital-garden",
     "bygg-din-egen-digitala-tradgard":  "building-your-own-digital-garden",
     "how-to-push-your-commits-to-an-existing-pr": "how-to-push-your-commits-to-an-existing-pr",
-    "hur-man-pusher-sina-commits-till-en-existerande-pr":  "how-to-push-your-commits-to-an-existing-pr"
+    "hur-man-pusher-sina-commits-till-en-existerande-pr":  "how-to-push-your-commits-to-an-existing-pr",
+    "removing-a-commit-from-your-own-branch": "removing-a-commit-from-your-own-branch",
+    "ta-bort-en-commit-från-din-egen-branch": "removing-a-commit-from-your-own-branch"
   },
   "sv-SE": {
     "home" : "hem",
@@ -43,6 +45,8 @@
     "building-your-own-digital-garden": "bygg-din-egen-digitala-tradgard",
     "bygg-din-egen-digitala-tradgard": "bygg-din-egen-digitala-tradgard",
     "how-to-push-your-commits-to-an-existing-pr": "hur-man-pusher-sina-commits-till-en-existerande-pr",
-    "hur-man-pusher-sina-commits-till-en-existerande-pr":  "hur-man-pusher-sina-commits-till-en-existerande-pr"
+    "hur-man-pusher-sina-commits-till-en-existerande-pr":  "hur-man-pusher-sina-commits-till-en-existerande-pr",
+    "removing-a-commit-from-your-own-branch": "ta-bort-en-commit-från-din-egen-branch",
+    "ta-bort-en-commit-från-din-egen-branch": "ta-bort-en-commit-från-din-egen-branch"
   }
 }
